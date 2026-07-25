@@ -1,0 +1,3 @@
+- `pipeline-flow.png` — the six-stage capability pipeline referenced in the root README's "Architecture Overview" section. Signal Sources → Event Orchestration → Reasoning & Enrichment → Schema Validation → System of Record → Notification & Audit. Capability-labeled only.
+- `example-workflow.png` — illustrative before/after snapshot, a fictional signal in, a scored and routed result out. Referenced in the README's "Example Workflow" section. Fictional company, no real data.
+- `build-activity.png` — real build activity from the private working repository this public repo documents. Referenced near the top of the root README, right after "What It Does."

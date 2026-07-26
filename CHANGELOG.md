@@ -1,0 +1,21 @@
+# Changelog
+
+All notable changes to this public repository are recorded here, loosely
+following [Keep a Changelog](https://keepachangelog.com/).
+
+## [0.1.0] - 2026-07-26
+
+### Added
+- `docs/philosophy.md`, `docs/design-principles.md`, `docs/governance.md`,
+  `docs/ai-components.md`, `docs/roadmap.md`
+- `architecture/system-overview.md`, `architecture/data-flow.md`,
+  `architecture/component-map.md`
+- `/examples`: fictional input/output pair and the webhook payload contract
+- `CONTRIBUTING.md`
+
+### Changed
+- `README.md`: links to the full documentation set, scope statement tightened
+- `docs/security.md`: least-privilege and credential-handling wording
+
+## [Unreleased]
+- Initial scaffold: repository structure, documentation, and fictional examples.

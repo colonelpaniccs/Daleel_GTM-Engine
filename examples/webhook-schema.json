@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Example Webhook Payload Contract",
+  "type": "object",
+  "required": ["company_name", "domain", "action_tier"],
+  "properties": {
+    "company_name": { "type": "string" },
+    "domain": { "type": "string" },
+    "region": { "type": "string" },
+    "signal_summary": { "type": "string" },
+    "action_tier": {
+      "type": "string",
+      "enum": ["tier_1", "tier_2", "tier_3", "tier_4", "tier_5"]
+    },
+    "signals_detected": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  }
+}

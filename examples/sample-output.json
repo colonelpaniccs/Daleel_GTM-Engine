@@ -1,0 +1,11 @@
+{
+  "company_name": "Palm AI (fictional)",
+  "domain": "palmai.example",
+  "region": "Saudi Arabia",
+  "signal_summary": "Closed a sovereign-backed Series B and posted 18 Sales/RevOps roles in 45 days.",
+  "action_tier": "tier_1",
+  "signals_detected": [
+    "Sovereign-backed Series B",
+    "18 Sales/RevOps roles posted in 45 days"
+  ]
+}

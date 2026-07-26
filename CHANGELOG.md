@@ -6,7 +6,7 @@ following [Keep a Changelog](https://keepachangelog.com/).
 ## [0.1.1] - 2026-07-26
 
 ### Changed
-- `images/pipeline-flow.png`: refreshed to a five-stage pipeline view —
+- `images/pipeline-flow.png`: refreshed to a five-stage pipeline view.
   Signal Sources, Enrichment & AI Reasoning, ICP Match & Scoring,
   CRM Enrichment, Delivery & Action
 - `images/example-workflow.png`: refreshed to match, with the enrichment

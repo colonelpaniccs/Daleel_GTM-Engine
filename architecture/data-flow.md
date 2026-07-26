@@ -23,5 +23,5 @@ System of Record
 Notification & Audit
 ```
 
-Each arrow represents a validated contract between stages. See /examples for
-more.
+Each arrow represents a validated contract between stages. See `/examples`
+for the input/output pair and the webhook contract.

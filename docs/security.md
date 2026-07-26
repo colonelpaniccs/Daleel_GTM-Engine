@@ -8,8 +8,10 @@
   workflow configuration values, logs, or code.
 - **Environment variables** for local development; committed example files
   contain placeholder values only.
-- **Least privilege.** Every service account and integration token is scoped
-  to the minimum required role. No broad admin access granted by default.
+- **Least privilege.** Service accounts and integration tokens are scoped to
+  the role a component's function requires. Platform default grants are
+  reviewed against actual usage and replaced with purpose-built credentials
+  where the default exceeds it.
 - **API key rotation.** Scheduled on a recurring cadence.
 - **Webhook URL handling.** Treated as secrets, never committed,
   documented, or shared.

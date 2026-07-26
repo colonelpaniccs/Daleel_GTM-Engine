@@ -3,6 +3,19 @@
 All notable changes to this public repository are recorded here, loosely
 following [Keep a Changelog](https://keepachangelog.com/).
 
+## [0.1.1] - 2026-07-26
+
+### Changed
+- `images/pipeline-flow.png`: refreshed to a five-stage pipeline view —
+  Signal Sources, Enrichment & AI Reasoning, ICP Match & Scoring,
+  CRM Enrichment, Delivery & Action
+- `images/example-workflow.png`: refreshed to match, with the enrichment
+  and scoring stage shown between input and result
+- Both diagrams moved onto a shared visual system
+- `README.md`: "Architecture Overview" section and image alt text updated
+  to the five-stage view
+- `images/README.md`: descriptions updated to match
+
 ## [0.1.0] - 2026-07-26
 
 ### Added

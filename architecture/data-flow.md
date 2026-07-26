@@ -8,20 +8,16 @@
 Signal Sources
       │
       ▼
-Event Orchestration
+Enrichment & AI Reasoning
       │
       ▼
-Reasoning & Enrichment
+ICP Match & Scoring
       │
       ▼
-Schema Validation
+CRM Enrichment
       │
       ▼
-System of Record
-      │
-      ▼
-Notification & Audit
+Delivery & Action
 ```
 
-Each arrow represents a validated contract between stages. See `/examples`
-for the input/output pair and the webhook contract.
+Each arrow represents a validated contract between stages. See `/examples` for the input/output pair and the webhook contract.

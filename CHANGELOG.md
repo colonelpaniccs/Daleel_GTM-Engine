@@ -15,6 +15,10 @@ following [Keep a Changelog](https://keepachangelog.com/).
 - `README.md`: "Architecture Overview" section and image alt text updated
   to the five-stage view
 - `images/README.md`: descriptions updated to match
+- `architecture/data-flow.md`: updated to the five-stage view, with
+  orchestration and monitoring described as cross-cutting concerns
+- `architecture/component-map.md`: updated to match, stages and
+  cross-cutting concerns listed separately
 
 ## [0.1.0] - 2026-07-26
 

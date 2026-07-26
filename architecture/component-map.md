@@ -2,14 +2,19 @@
 
 Who owns what, at a capability level.
 
-| Component            | Responsibility                                   |
-|-----------------------|---------------------------------------------------|
-| Signal ingestion       | Detect and normalize raw external signals          |
-| Orchestration layer     | Route, sequence, and retry between stages     |
-| Reasoning layer         | Extract structure, enrich context, score outcomes  |
-| Validation layer        | Enforce the output contract                        |
-| System of record        | Hold current account state                         |
-| Monitoring              | Evaluate health, surface deviations for review     |
+## Stages
 
-> [!NOTE]
-> No component crosses into another's lane.
+| # | Stage                     | Responsibility                                          |
+|---|---------------------------|---------------------------------------------------------|
+| 1 | Signal Sources            | Detect and normalize raw external signals               |
+| 2 | Enrichment & AI Reasoning | Resolve entities, gather context, extract structure     |
+| 3 | ICP Match & Scoring       | Judge fit against the profile, assign a priority tier   |
+| 4 | CRM Enrichment            | Enforce the output contract, hold current account state |
+| 5 | Delivery & Action         | Route what matters to the people who act on it          |
+
+## Pipeline-wide
+
+| Component     | Responsibility                                 |
+|---------------|------------------------------------------------|
+| Orchestration | Route, sequence, and retry between stages      |
+| Monitoring    | Evaluate health, surface deviations for review |

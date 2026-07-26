@@ -1,6 +1,6 @@
 # GTM Engine
 
-> Reduce manual prospect research. Surface buying signals before competitors. Deliver prioritized accounts directly into your CRM.
+> Automated prospect intelligence pipeline for MENA/GCC go-to-market expansion.
 
 [![Status](https://img.shields.io/badge/status-active--build-89bd93)]()
 [![Docs](https://img.shields.io/badge/docs-architecture%20%26%20governance-b09bd6)]()
@@ -29,9 +29,9 @@ See [`docs/design-principles.md`](./docs/design-principles.md) for the full list
 
 ## Architecture Overview
 
-![Six-stage pipeline: Signal Sources, Event Orchestration, Reasoning & Enrichment, Schema Validation, System of Record, Notification & Audit](./images/pipeline-flow.png)
+![Five-stage pipeline: Signal Sources, Enrichment & AI Reasoning, ICP Match & Scoring, CRM Enrichment, Delivery & Action](./images/pipeline-flow.png)
 
-Six capability stages. Every handoff between them is validated before the next begins. See [`architecture/data-flow.md`](./architecture/data-flow.md).
+Five capability stages. Every handoff between them is validated before the next begins. See [`architecture/data-flow.md`](./architecture/data-flow.md).
 
 ## How It Works
 

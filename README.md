@@ -1,6 +1,6 @@
 # GTM Engine
 
-> Automated prospect intelligence pipeline for MENA/GCC go-to-market expansion.
+> Automated prospect intelligence pipeline for regional go-to-market expansion.
 
 [![Status](https://img.shields.io/badge/status-active--build-89bd93)]()
 [![Docs](https://img.shields.io/badge/docs-architecture%20%26%20governance-b09bd6)]()

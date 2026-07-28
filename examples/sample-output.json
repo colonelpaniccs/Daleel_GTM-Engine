@@ -3,9 +3,18 @@
   "domain": "palmai.example",
   "region": "Saudi Arabia",
   "signal_summary": "Closed a sovereign-backed Series B and posted 18 Sales/RevOps roles in 45 days.",
-  "action_tier": "tier_1",
   "signals_detected": [
     "Sovereign-backed Series B",
     "18 Sales/RevOps roles posted in 45 days"
-  ]
+  ],
+  "gtm_maturity": {
+    "stage": "scaling-gtm",
+    "confidence": "high",
+    "reasoning": "VP Sales hire and segmented AE roles alongside a sovereign-backed Series B indicate active transition to structured sales. Leadership, team structure, and funding tier corroborate high confidence."
+  },
+  "score_breakdown": {
+    "total": 78
+  },
+  "action_tier": "hot",
+  "alert_triggered": true
 }

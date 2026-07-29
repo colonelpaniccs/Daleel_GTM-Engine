@@ -13,7 +13,7 @@
 
 ## What It Does
 
-Daleel's GTM Engine continuously monitors publicly available signals across the MENA/GCC region, identifies companies exhibiting scaling behavior, scores them against a defined ICP, and surfaces prioritized accounts to a revenue team. No manual research required.
+Daleel's GTM Engine continuously monitors publicly available signals across the MENA/GCC region, identifies companies exhibiting scaling behavior, scores them against a defined ICP, and surfaces prioritized accounts to your revenue team. No manual research required.
 
 Built agentic: the Engine reasons, infers, routes, and acts on the team's behalf, writing records and routing alerts. A named agent schedules health checks across the pipeline and surfaces what needs attention.
 

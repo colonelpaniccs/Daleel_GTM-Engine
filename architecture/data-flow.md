@@ -8,13 +8,13 @@
 Signal Sources
       │
       ▼
-Enrichment & AI Reasoning
+AI Reasoning & Enrichment
       │
       ▼
 ICP Match & Scoring
       │
       ▼
-CRM Enrichment
+CRM Write & Audit
       │
       ▼
 Delivery & Action

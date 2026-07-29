@@ -1,6 +1,6 @@
 # GTM Engine
 
-> Automated prospect intelligence pipeline for regional go-to-market expansion.
+> Automated prospect intelligence pipeline for regional go-to-market expansion, built for teams as the signal layer inside your revenue orchestration stack.
 
 [![Status](https://img.shields.io/badge/status-active--build-89bd93)]()
 [![Docs](https://img.shields.io/badge/docs-architecture%20%26%20governance-b09bd6)]()
@@ -17,7 +17,11 @@ Daleel's GTM Engine continuously monitors publicly available signals across the 
 
 Built agentic: the Engine reasons, infers, routes, and acts on the team's behalf, writing records and routing alerts. A named agent schedules health checks across the pipeline and surfaces what needs attention.
 
-Signal in. Scored. Enriched. Routed. Every run.
+Teams selling into revenue and sales orgs use Daleel's engine signals to see who's actively scaling, and how ready they are to buy.
+
+Current platforms are built for markets that already have deep, structured coverage. The Gulf's AI and software economy is one of the fastest-growing in the world, but stands uncovered. We are building for that gap.
+
+Signal in. Enriched. Scored. Routed. Every run.
 
 ![Ongoing build activity from the private repository this public repo documents](./images/build-activity.png)
 
@@ -29,7 +33,7 @@ See [`docs/design-principles.md`](./docs/design-principles.md) for the full list
 
 ## Architecture Overview
 
-![Five-stage pipeline: Signal Sources, Enrichment & AI Reasoning, ICP Match & Scoring, CRM Enrichment, Delivery & Action](./images/pipeline-flow.png)
+![Five-stage pipeline: Signal Sources, AI Reasoning & Enrichment, ICP Match & Scoring, CRM Write & Audit, Delivery & Action](./images/pipeline-flow.png)
 
 Five capability stages. Every handoff between them is validated before the next begins. See [`architecture/data-flow.md`](./architecture/data-flow.md).
 
@@ -53,7 +57,7 @@ See [`docs/ai-components.md`](./docs/ai-components.md): capability-first, tools 
 
 ## Example Workflow
 
-![Illustrative example: a signal comes in, the pipeline scores and enriches it, and a prioritized result is routed to a rep](./images/example-workflow.png)
+![Illustrative example: a signal comes in, the pipeline enriches and scores it, and a prioritized result is routed to a rep](./images/example-workflow.png)
 
 *Illustrative example, fictional company, no real data. See `/examples` for the fictional input/output pair and the webhook payload contract.*
 

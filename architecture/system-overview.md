@@ -33,4 +33,4 @@ up a team's own instincts.
 > [!NOTE]
 > The scoring framework and signal library behind these judgments stay
 > private, and `docs/security.md` explains why. The output schema itself
-> is public, see `/examples` to learn more.
+> is public, see [`/examples`](../examples) to learn more.

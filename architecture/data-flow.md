@@ -20,4 +20,4 @@ CRM Write & Audit
 Delivery & Action
 ```
 
-Each arrow represents a validated contract between stages. See `/examples` for the input/output pair and the webhook contract.
+Each arrow represents a validated contract between stages. See [`/examples`](../examples) for the input/output pair and the webhook contract.

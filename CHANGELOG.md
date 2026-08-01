@@ -3,6 +3,26 @@
 All notable changes to this public repository are recorded here, loosely
 following [Keep a Changelog](https://keepachangelog.com/).
 
+## [0.2.0] - 2026-08-01
+
+### Added
+- `images/slack-demo.gif` and `images/weekly-digest-demo.gif`: short
+  recordings of a company submitted in chat returning a scored result,
+  and of the scheduled digest as it arrives
+- `README.md`: "Walkthroughs" section holding both recordings
+
+### Changed
+- `/examples` path references in `README.md`,
+  `architecture/system-overview.md`, and `architecture/data-flow.md` are
+  now links
+- `images/README.md`: descriptions added for both new recordings;
+  `build-activity.png`'s entry updated to reflect it no longer appears
+  in `README.md`
+
+### Removed
+- `images/build-activity.png` no longer embedded in `README.md`. The
+  file itself is unchanged and remains in `/images`
+
 ## [0.1.1] - 2026-07-26
 
 ### Changed

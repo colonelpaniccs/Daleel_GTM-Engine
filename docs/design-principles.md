@@ -33,6 +33,13 @@ it entirely. Nothing here asks anyone to migrate, maintain a second
 system, or reconcile duplicates. Competing with the CRM for authority
 creates work.
 
+## A signal isn't the message
+
+A funding round or a new hire is visible to anyone with an internet
+connection. The system reads that event as a cue to look closer at the
+company, and the message a rep sends comes from what that closer look
+turns up.
+
 ## Right-sized capability
 
 Tooling and model selection are deliberate choices made per stage, based

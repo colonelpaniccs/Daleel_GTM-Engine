@@ -13,7 +13,7 @@
 
 ## What It Does
 
-Daleel's GTM Engine continuously monitors publicly available signals across the MENA/GCC region, identifies companies exhibiting scaling behavior, scores them against a defined ICP, and surfaces prioritized accounts to a revenue team. No manual research required.
+Daleel's GTM Engine continuously monitors publicly available signals across the MENA/GCC region, identifies companies exhibiting scaling behavior, scores them against a defined ICP, and surfaces prioritized accounts to your revenue team. No manual research required.
 
 A signal is a cue to look closer, not something to repeat back. A good seller knows it should never be the copy. More on this in [`docs/philosophy.md`](./docs/philosophy.md).
 
@@ -24,10 +24,6 @@ Teams selling into revenue and sales orgs use Daleel's engine signals to see who
 Current platforms are built for markets that already have deep, structured coverage. The Gulf's AI and software economy is one of the fastest-growing in the world, but stands uncovered. We are building for that gap.
 
 Signal in. Enriched. Scored. Routed. Every run.
-
-![Ongoing build activity from the private repository this public repo documents](./images/build-activity.png)
-
-*Ongoing build activity from the private repository this public repo documents.*
 
 ## Design Principles
 
@@ -53,6 +49,16 @@ Five capability stages. Every handoff between them is validated before the next 
 > [!IMPORTANT]
 > **Validation, persistence, and notification.** Output is checked against a strict schema before anything is written. Validated results sync to your CRM, and a full audit is logged for every outcome, including when nothing changed. Prioritized accounts reach the revenue team through a scheduled digest. A sudden spike in signal concentration at the account level routes straight to the responsible rep.
 
+## Walkthroughs
+
+<img src="./images/slack-demo.gif" width="1000" alt="A company submitted in chat returns a scored, enriched profile in the same thread">
+
+*A company submitted in chat, enriched and scored in the same thread. Fictional company, no real data.*
+
+<img src="./images/weekly-digest-demo.gif" width="1000" alt="The scheduled digest email listing prioritized accounts with scores, signals, and the reasoning behind each score">
+
+*The weekly email digest as it arrives. Fictional companies, no real data.*
+
 ## AI Components
 
 See [`docs/ai-components.md`](./docs/ai-components.md): capability-first, tools are swappable.
@@ -61,7 +67,7 @@ See [`docs/ai-components.md`](./docs/ai-components.md): capability-first, tools 
 
 ![Illustrative example: a signal comes in, the pipeline enriches and scores it, and a prioritized result is routed to a rep](./images/example-workflow.png)
 
-*Illustrative example, fictional company, no real data. See `/examples` for the fictional input/output pair and the webhook payload contract.*
+*Illustrative example, fictional company, no real data. See [`/examples`](./examples) for the fictional input/output pair and the webhook payload contract.*
 
 ## Roadmap
 
@@ -92,5 +98,6 @@ LICENSE            all rights reserved, except /examples (MIT)
 /docs             philosophy, design principles, governance, security, roadmap, AI components
 /architecture     system overview, data flow, component map (capability-level)
 /examples         fictional sample input/output, webhook schema
-/images           pipeline flow, example workflow, and build-activity diagrams
+/images           pipeline flow, example workflow, walkthrough recordings,
+                  and build-activity diagram
 ```

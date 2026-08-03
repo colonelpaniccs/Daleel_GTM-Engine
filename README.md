@@ -1,6 +1,6 @@
-# GTM Engine
+# Daleel | GTM Engine
 
-> Automated prospect intelligence pipeline for regional go-to-market expansion, built for teams as the signal layer inside your revenue orchestration stack.
+> An automated pipeline for regional go-to-market expansion, built as the signal intelligence layer inside your revenue orchestration stack.
 
 [![Status](https://img.shields.io/badge/status-active--build-89bd93)]()
 [![Docs](https://img.shields.io/badge/docs-architecture%20%26%20governance-b09bd6)]()

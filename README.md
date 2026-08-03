@@ -1,6 +1,10 @@
-# Daleel | GTM Engine
+<h1>
+  <img src="./images/branding/falcon-tight.png" alt="" height="46" align="left" />
+  Daleel | GTM Engine
+</h1>
+<br clear="all" />
 
-> An automated pipeline for regional go-to-market expansion, built as the signal intelligence layer inside your revenue orchestration stack.
+> The signal intelligence layer inside your revenue stack — built for teams scaling go-to-market in the Middle East
 
 [![Status](https://img.shields.io/badge/status-active--build-89bd93)]()
 [![Docs](https://img.shields.io/badge/docs-architecture%20%26%20governance-b09bd6)]()
@@ -13,7 +17,7 @@
 
 ## What It Does
 
-Daleel's GTM Engine continuously monitors publicly available signals across the MENA/GCC region, identifies companies exhibiting scaling behavior, scores them against a defined ICP, and surfaces prioritized accounts to your revenue team. No manual research required.
+Daleel's GTM Engine continuously monitors publicly available signals across the MENA/GCC region, identifies companies exhibiting scaling behavior, scores them against a defined ICP, and surfaces prioritized accounts to your revenue team. No manual research required. Multilingual by design, with Arabic inputs handled natively.
 
 A signal is a cue to look closer, not something to repeat back. A good seller knows it should never be the copy. More on this in [`docs/philosophy.md`](./docs/philosophy.md).
 

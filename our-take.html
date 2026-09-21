@@ -1,4 +1,4 @@
-<title>Our take | Daleel</title>
+<title>Our take | daleel</title>
 <style>
   :root {
     --surface-page: #fefaf3;
@@ -348,6 +348,20 @@
   .lede { margin-top: 0; }
   .lede .sub { margin-bottom: clamp(48px, 7vw, 76px); }
 
+
+  .take-layout { display:grid; grid-template-columns: minmax(0,62ch) 1fr; gap: 48px; align-items: start; }
+  @media (max-width: 900px) { .take-layout { grid-template-columns: 1fr; } .take-side { display:none; } }
+  .take-layout .prose { max-width: none; }
+
+  .take-side-op28 { position: relative; height: 100%; min-height: 420px; }
+  .def-op28 { position: absolute; top: 30px; right: 0; text-align: right; }
+  .def-op28 .word { display:block; font-weight: 800; font-size: 56px; letter-spacing: -0.02em; color: var(--brand-orange);
+                 opacity: 0.28; line-height: 1; }
+  .def-op28 .ipa { display:block; font-size: 15px; color: var(--brand-orange); opacity: 0.5; margin-top: 10px; }
+  .def-op28 .pos { display:block; font-size: 10.5px; font-weight:700; letter-spacing:.14em; text-transform:uppercase;
+                color: var(--text-muted); margin: 18px 0 6px; }
+  .def-op28 .mean { font-size: 16px; line-height: 1.6; color: var(--text-secondary); max-width: 26ch; margin-left: auto; }
+
 </style>
 <script>
   (function () {
@@ -372,7 +386,7 @@
   .site-nav.no-brand::before { font-size:20px; font-weight:700; letter-spacing:-0.015em; }
   .site-nav .brand { color:var(--text-primary); text-decoration:none; }
   .site-nav .brand:hover { color:var(--brand-orange); }
-  .site-nav.no-brand::before { content:"Daleel"; visibility:hidden; }
+  .site-nav.no-brand::before { content:"daleel"; visibility:hidden; }
   .site-nav-links { display:flex; gap:10px 22px; margin-left:auto; flex-wrap:wrap; align-items:baseline; justify-content:flex-end; }
   .site-nav-links a { font-size:14px; font-weight:600; color:var(--text-secondary); text-decoration:none; transition:color .15s ease; }
   .site-nav-links a:hover { color:var(--brand-orange); }
@@ -519,16 +533,30 @@
     .flow-b .row-arrow { display:none; }
     .two { grid-template-columns:1fr; }
   }
+
+  .take-layout { display:grid; grid-template-columns: minmax(0,62ch) 1fr; gap: 48px; align-items: start; }
+  @media (max-width: 900px) { .take-layout { grid-template-columns: 1fr; } .take-side { display:none; } }
+  .take-layout .prose { max-width: none; }
+
+  .take-side-op28 { position: relative; height: 100%; min-height: 420px; }
+  .def-op28 { position: absolute; top: 30px; right: 0; text-align: right; }
+  .def-op28 .word { display:block; font-weight: 800; font-size: 56px; letter-spacing: -0.02em; color: var(--brand-orange);
+                 opacity: 0.28; line-height: 1; }
+  .def-op28 .ipa { display:block; font-size: 15px; color: var(--brand-orange); opacity: 0.5; margin-top: 10px; }
+  .def-op28 .pos { display:block; font-size: 10.5px; font-weight:700; letter-spacing:.14em; text-transform:uppercase;
+                color: var(--text-muted); margin: 18px 0 6px; }
+  .def-op28 .mean { font-size: 16px; line-height: 1.6; color: var(--text-secondary); max-width: 26ch; margin-left: auto; }
+
 </style>
 
 
 <div class="wrap">
 
   <nav class="site-nav" aria-label="Primary">
-    <a class="brand" href="index.html">Daleel</a>
+    <a class="brand" href="index.html">daleel</a>
     <div class="site-nav-links">
       <a href="index.html">Home</a>
-      <a href="inside-daleel.html">Inside Daleel</a>
+      <a href="inside-daleel.html">Inside daleel</a>
       <a href="our-take.html" class="current">Our take</a>
       <a href="contact.html">Contact</a>
       <a href="https://github.com/colonelpaniccs/Daleel_GTM-Engine" target="_blank" rel="noopener">GitHub</a>
@@ -540,7 +568,7 @@
     <h1>Our take</h1>
   </div>
 
-  <div class="prose">
+  <div class="take-layout"><div class="prose">
     <p>After 10+ years in B2B SaaS, I&rsquo;ve watched every funding round become a pitch. A new role becomes a congratulations note, and a pitch. This is an active problem:</p>
 
     <p class="pull">Every seller reading the same public sources produces the same message, landing in an inbox that already holds forty of them.</p>
@@ -549,9 +577,20 @@
 
     <p>Real understanding starts with the problem a persona faces inside their org. These details simply support timely, relevant outreach.</p>
 
-    <p>That is the whole idea behind Daleel. Find the cue, understand the organization behind it, and put that context in front of the person who can act on it while it still means something.</p>
+    <p>That is the whole idea behind daleel. Find the cue, understand the organization behind it, and put that context in front of the person who can act on it while it still means something.</p>
 
-    <p class="sig">Julian Johnson <span class="sig-role">&ndash; Founder, Daleel</span></p>
+    <p class="sig">Julian Johnson <span class="sig-role">&ndash; Founder &amp; Architect, daleel</span></p>
+  </div>
+  
+  <div class="take-side take-side-op28">
+    <div class="def-op28">
+      <span class="word">da&middot;leel</span>
+      <span class="ipa">/d&#601;-LEEL/</span>
+      <span class="pos">noun &middot; Arabic &#1583;&#1604;&#1610;&#1604;</span>
+      <span class="mean">a guide; the proof that points the way.</span>
+    </div>
+  </div>
+
   </div>
 
   <div class="cta-row">
@@ -562,9 +601,9 @@
   </div>
 
   <footer>
-    <p class="foot-legal">&copy; 2026 Daleel. All rights reserved.</p>
+    <p class="foot-legal">&copy; 2026 daleel. All rights reserved.</p>
     <nav class="foot-nav" aria-label="Footer">
-      <a href="inside-daleel.html">Inside Daleel</a>
+      <a href="inside-daleel.html">Inside daleel</a>
       <a href="our-take.html">Our take</a>
       <a href="contact.html">Contact</a>
       <a href="https://github.com/colonelpaniccs/Daleel_GTM-Engine" target="_blank" rel="noopener">GitHub</a>

@@ -1,4 +1,8 @@
-<title>Thank you | daleel</title>
+<title>Talk to us | daleel</title>
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <style>
   :root {
     --surface-page: #fefaf3;
@@ -377,10 +381,10 @@
   .site-nav-links a { font-size:14px; font-weight:600; color:var(--text-secondary); text-decoration:none; transition:color .15s ease; }
   .site-nav-links a:hover { color:var(--brand-orange); }
   .site-nav-links a.current { color:var(--text-primary); }
-  .lang { display:inline-flex; gap:9px; align-items:center; padding-left:18px; border-left:1px solid var(--surface-border); }
-  .lang span { font-size:13px; color:var(--text-muted); cursor:default; }
+  .lang { display:inline-flex; gap:7px; align-items:center; padding-left:18px; border-left:1px solid var(--surface-border); }
+  .lang span { font-size:13px; color:var(--text-secondary); cursor:default; }
   .lang span.on { color:var(--text-primary); font-weight:700; }
-  .lang span.ar { font-size:15px; font-family: "Noto Naskh Arabic", "Noto Sans Arabic", "Segoe UI", "Geeza Pro", "Arial", sans-serif; display:inline-block; position:relative; top:-1px; line-height:1; }
+  .lang span.ar { font-size:15px; font-family: "Noto Naskh Arabic", "Noto Sans Arabic", "Segoe UI", "Geeza Pro", "Arial", sans-serif; display:inline-block; position:relative; top:-3px; line-height:1; }
 
   .vh { position:absolute; width:1px; height:1px; margin:-1px; padding:0; overflow:hidden;
         clip-path:inset(50%); white-space:nowrap; border:0; }
@@ -475,8 +479,12 @@
   .field[hidden] { display:none; }
   .field label { font-size:11.5px; font-weight:700; letter-spacing:.09em; text-transform:uppercase; color:var(--text-secondary); }
   .field input, .field select, .field textarea {
-    font-family:inherit; font-size:15px; color:var(--text-primary); background:var(--surface-card);
+    font-family:inherit; font-size:15px; line-height:1.4; color:var(--text-primary); background:var(--surface-card);
     border:1px solid var(--surface-border); border-radius:10px; padding:11px 13px; width:100%; }
+  .field select {
+    appearance:none; -webkit-appearance:none; -moz-appearance:none;
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'><path d='M1 1l5 5 5-5' fill='none' stroke='%236b625c' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/></svg>");
+    background-repeat:no-repeat; background-position:right 14px center; padding-right:36px; }
   .field input:not([type="radio"]):focus, .field select:focus, .field textarea:focus { outline:2px solid var(--brand-orange); outline-offset:1px; border-color:var(--brand-orange); }
   .field textarea { min-height:110px; resize:vertical; }
   .field .hint { font-size:12.5px; color:var(--text-muted); }
@@ -522,38 +530,160 @@
 </style>
 
 
-<div class="wrap short">
+<div class="wrap">
 
   <nav class="site-nav" aria-label="Primary">
-    <a class="brand" href="index.html">daleel</a>
+    <a class="brand" href="/">daleel.</a>
     <div class="site-nav-links">
-      <a href="index.html">Home</a>
-      <a href="inside-daleel.html">Inside daleel</a>
-      <a href="our-take.html">Our take</a>
-      <a href="contact.html" class="current">Contact</a>
+      <a href="/">Home</a>
+      <a href="/inside-daleel/">Inside daleel</a>
+      <a href="/our-take/">Our take</a>
+      <a href="/contact/" class="current">Contact</a>
       <a href="https://github.com/colonelpaniccs/Daleel_GTM-Engine" target="_blank" rel="noopener">GitHub</a>
       <span class="lang" aria-label="Language"><span class="on">EN</span><span class="ar">&#1593;&#1585;&#1576;&#1610;</span></span>
     </div>
   </nav>
 
   <div class="page-head">
-    <h1>Thank you</h1>
-    <p class="standfirst">That reached us. We will come back to you shortly.</p>
+    <h1>Talk to us</h1>
+    <p class="standfirst">Tell us where your team is today and where you&rsquo;re heading next.</p>
   </div>
 
-  <div class="cta-row">
-    <a class="cta" href="index.html">
-      Return home
-      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10"/><path d="M9 4l4 4-4 4"/></svg>
-    </a>
-  </div>
+  <form class="form" method="POST" action="POWER_AUTOMATE_URL_HERE">
+    <input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+    <div class="two">
+      <div class="field">
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" autocomplete="name" required>
+      </div>
+      <div class="field">
+        <label for="email">Work email</label>
+        <input id="email" name="email" type="email" autocomplete="email" required>
+      </div>
+    </div>
+
+    <div class="two">
+      <div class="field">
+        <label for="company">Company</label>
+        <input id="company" name="company" type="text" autocomplete="organization" required>
+      </div>
+      <div class="field">
+        <label for="website">Website</label>
+        <input id="website" name="website" type="text" placeholder="company.com">
+      </div>
+    </div>
+
+    <div class="field">
+      <label for="location">Location</label>
+      <input id="location" name="location" type="text" placeholder="City, country" required>
+    </div>
+
+    <div class="field">
+      <label for="market">Regional presence</label>
+      <select id="market" name="market" required>
+        <option value="">Select one</option>
+        <option>Headquartered in the Gulf</option>
+        <option>Expanding into the Gulf</option>
+        <option>Selling into the Gulf from elsewhere</option>
+        <option value="other">Other</option>
+      </select>
+    </div>
+
+    <div class="field" id="otherWrap" hidden>
+      <label for="market_other">Tell us which</label>
+      <input id="market_other" name="market_other" type="text">
+    </div>
+
+    <fieldset class="field group">
+      <span class="legend">Sector</span>
+      <div class="radio-row">
+        <label><input type="radio" name="sector" value="government" required> Government</label>
+        <label><input type="radio" name="sector" value="semi-government"> Semi-government</label>
+        <label><input type="radio" name="sector" value="private"> Private</label>
+      </div>
+    </fieldset>
+
+    <div class="field">
+      <label for="motion">Your sales motion</label>
+      <select id="motion" name="motion" required>
+        <option value="">Select one</option>
+        <option>Founder-led</option>
+        <option>Building the first sales team</option>
+        <option>Scaling an existing team</option>
+        <option>Established and optimising</option>
+      </select>
+    </div>
+
+    <div class="field">
+      <label for="crm">Your CRM</label>
+      <select id="crm" name="crm" required>
+        <option value="">Select one</option>
+        <option>HubSpot</option>
+        <option>Salesforce</option>
+        <option>Microsoft Dynamics 365</option>
+        <option>Zoho</option>
+        <option>Other</option>
+        <option>None</option>
+      </select>
+    </div>
+
+    <div class="field">
+      <label for="notes">Tell us what you&rsquo;re working on</label>
+      <textarea id="notes" name="notes"></textarea>
+    </div>
+
+    <p class="form-error" id="formError" hidden>Something went wrong sending that. Email <a href="mailto:hello@daleel.fyi">hello@daleel.fyi</a> and we will pick it up.</p>
+
+    <div>
+      <button class="cta" type="submit">Send &nbsp;<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10"/><path d="M9 4l4 4-4 4"/></svg></button>
+    </div>
+  </form>
+
+  <script>
+    (function () {
+      var sel = document.getElementById('market');
+      var wrap = document.getElementById('otherWrap');
+      var other = document.getElementById('market_other');
+      if (sel && wrap && other) {
+        sel.addEventListener('change', function () {
+          var isOther = sel.value === 'other';
+          wrap.hidden = !isOther;
+          other.required = isOther;
+        });
+      }
+
+      var form = document.querySelector('.form');
+      if (!form) return;
+      var btn = form.querySelector('button[type="submit"]');
+      var err = document.getElementById('formError');
+      var btnHTML = btn ? btn.innerHTML : '';
+
+      form.addEventListener('submit', function (ev) {
+        if (!form.checkValidity()) return;
+        ev.preventDefault();
+        if (err) err.hidden = true;
+        if (btn) { btn.disabled = true; btn.textContent = 'Sending'; }
+        fetch(form.action, { method: 'POST', body: new FormData(form) })
+          .then(function (r) {
+            if (!r.ok) throw new Error(r.status);
+            window.location.href = 'thanks.html';
+          })
+          .catch(function () {
+            if (btn) { btn.disabled = false; btn.innerHTML = btnHTML; }
+            if (err) err.hidden = false;
+          });
+      });
+    })();
+  </script>
+
 
   <footer>
     <p class="foot-legal">&copy; 2026 daleel. All rights reserved.</p>
     <nav class="foot-nav" aria-label="Footer">
-      <a href="inside-daleel.html">Inside daleel</a>
-      <a href="our-take.html">Our take</a>
-      <a href="contact.html">Contact</a>
+      <a href="/inside-daleel/">Inside daleel</a>
+      <a href="/our-take/">Our take</a>
+      <a href="/contact/">Contact</a>
       <a href="https://github.com/colonelpaniccs/Daleel_GTM-Engine" target="_blank" rel="noopener">GitHub</a>
       <a href="#" data-placeholder="true">Privacy</a>
       <a href="#" data-placeholder="true">Terms</a>

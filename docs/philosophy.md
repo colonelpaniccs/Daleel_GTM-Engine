@@ -37,9 +37,11 @@ active problem: every seller reading the same public sources produces the
 same message, landing in an inbox that already holds forty of them. The
 fix is to treat the event as a cue: a company entering a new market,
 three seats opening in a function that never existed there before, a
-tool stack that just changed shape. Real understanding starts with the
-problem a persona faces inside their org. These details simply support
-timely, relevant outreach.
+tool stack that just changed shape. These details simply support
+timely, relevant outreach. Real understanding starts with the problem a
+person faces inside their org. That's the whole idea behind daleel. Find
+the cue, understand the organization behind it, and put that context in
+front of the person who can act on it while it still means something.
 
 > [!NOTE]
 > These are stated as constraints in `design-principles.md` and as the

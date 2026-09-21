@@ -1,6 +1,6 @@
 <h1>
   <img src="./images/branding/falcon-tight.png" alt="" height="46" align="left" />
-  Daleel | GTM Engine
+  daleel | GTM Engine
 </h1>
 <br clear="all" />
 

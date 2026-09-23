@@ -11,7 +11,7 @@
     --surface-border: #e4ded8;
     --text-primary: #1c1816;
     --text-secondary: #6b625c;
-    --text-muted: #a79e97;
+    --text-muted: #7a706a;
     --brand-orange: #f5721e;
     --brand-orange-tint: #fdf0e8;
     --accent-orange-mid: #ef9871;
@@ -540,6 +540,7 @@
       <a href="/inside-daleel/" class="current">Inside daleel</a>
       <a href="/our-take/">Our take</a>
       <a href="/contact/">Contact</a>
+      <a href="/partners/">Partners</a>
       <a href="https://github.com/colonelpaniccs/daleel_GTM-Engine" target="_blank" rel="noopener">GitHub</a>
       <span class="lang" aria-label="Language"><span class="on">EN</span><span class="ar">&#1593;&#1585;&#1576;&#1610;</span></span>
     </div>
@@ -661,6 +662,18 @@
     <video autoplay muted loop playsinline preload="metadata">
       <source src="/wahademo.mp4" type="video/mp4">
     </video>
+    <script>
+      (function () {
+        var v = document.querySelector('.demo-video video');
+        if (!v) return;
+        v.muted = true; v.defaultMuted = true; v.playsInline = true;
+        function tryPlay() { if (!v.paused) return; var p = v.play(); if (p && p.catch) p.catch(function () {}); }
+        if (v.readyState >= 2) tryPlay(); else v.addEventListener('canplay', tryPlay, { once: true });
+        ['touchstart', 'click', 'scroll', 'keydown'].forEach(function (e) {
+          window.addEventListener(e, tryPlay, { once: true, passive: true });
+        });
+      })();
+    </script>
   </div>
 
   <div class="cta-row">
@@ -677,6 +690,7 @@
       <a href="/inside-daleel/">Inside daleel</a>
       <a href="/our-take/">Our take</a>
       <a href="/contact/">Contact</a>
+      <a href="/partners/">Partners</a>
       <a href="https://github.com/colonelpaniccs/daleel_GTM-Engine" target="_blank" rel="noopener">GitHub</a>
       <a href="#" data-placeholder="true">Privacy</a>
       <a href="#" data-placeholder="true">Terms</a>

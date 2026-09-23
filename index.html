@@ -4,6 +4,7 @@
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png?v=3">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png?v=3">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=3">
+<link rel="prefetch" href="/ar/dallah.svg" as="image">
 <style>
   :root {
     --surface-page: #fefaf3;
@@ -466,10 +467,12 @@
   .site-nav-links a { font-size:14px; font-weight:600; color:var(--text-secondary); text-decoration:none; transition:color .15s ease; }
   .site-nav-links a:hover { color:var(--brand-orange); }
   .site-nav-links a.current { color:var(--text-primary); }
-  .lang { display:inline-flex; gap:7px; align-items:center; padding-left:18px; border-left:1px solid var(--surface-border); }
+  .lang { display:inline-flex; gap:5px; align-items:baseline; padding-left:18px; border-left:1px solid var(--surface-border); }
   .lang span { font-size:13px; color:var(--text-secondary); cursor:default; }
   .lang span.on { color:var(--text-primary); font-weight:700; }
-  .lang span.ar { font-size:15px; font-family: "Noto Naskh Arabic", "Noto Sans Arabic", "Segoe UI", "Geeza Pro", "Arial", sans-serif; display:inline-block; position:relative; top:-3px; line-height:1; }
+  .lang .ar { font-size:15px; font-family: "Noto Naskh Arabic", "Noto Sans Arabic", "Segoe UI", "Geeza Pro", "Arial", sans-serif; display:inline-block; position:relative; top:-3.3px; line-height:1; }
+  .lang a.ar { color:var(--text-secondary); font-weight:400; text-decoration:none; transition:color .15s ease; }
+  .lang a.ar:hover { color:var(--brand-orange); }
 
   .vh { position:absolute; width:1px; height:1px; margin:-1px; padding:0; overflow:hidden;
         clip-path:inset(50%); white-space:nowrap; border:0; }
@@ -625,7 +628,7 @@
       <a href="/contact/">Contact</a>
       <a href="/partners/">Partners</a>
       <a href="https://github.com/colonelpaniccs/daleel_GTM-Engine" target="_blank" rel="noopener">GitHub</a>
-      <span class="lang" aria-label="Language"><span class="on">EN</span><span class="ar">&#1593;&#1585;&#1576;&#1610;</span></span>
+      <span class="lang" aria-label="Language"><span class="on">EN</span><a class="ar" href="/ar/" lang="ar" dir="rtl" hreflang="ar">&#1593;&#1585;&#1576;&#1610;</a></span>
     </div>
   </nav>
 
@@ -728,8 +731,7 @@
       <a href="/contact/">Contact</a>
       <a href="/partners/">Partners</a>
       <a href="https://github.com/colonelpaniccs/daleel_GTM-Engine" target="_blank" rel="noopener">GitHub</a>
-      <a href="#" data-placeholder="true">Privacy</a>
-      <a href="#" data-placeholder="true">Terms</a>
+      <a href="/privacy/">Privacy</a>
     </nav>
   </footer>
 

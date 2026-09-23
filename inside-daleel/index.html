@@ -659,7 +659,7 @@
   </script>
 
   <div class="demo-video">
-    <video autoplay muted loop playsinline preload="metadata">
+    <video muted loop playsinline preload="auto">
       <source src="/wahademo.mp4" type="video/mp4">
     </video>
     <script>
@@ -667,10 +667,21 @@
         var v = document.querySelector('.demo-video video');
         if (!v) return;
         v.muted = true; v.defaultMuted = true; v.playsInline = true;
-        function tryPlay() { if (!v.paused) return; var p = v.play(); if (p && p.catch) p.catch(function () {}); }
-        if (v.readyState >= 2) tryPlay(); else v.addEventListener('canplay', tryPlay, { once: true });
-        ['touchstart', 'click', 'scroll', 'keydown'].forEach(function (e) {
-          window.addEventListener(e, tryPlay, { once: true, passive: true });
+        var inView = false, started = false;
+        function tryPlay() {
+          if (!inView || !v.paused) return;
+          if (!started) { v.currentTime = 0; started = true; }
+          var p = v.play(); if (p && p.catch) p.catch(function () {});
+        }
+        if ('IntersectionObserver' in window) {
+          new IntersectionObserver(function (entries) {
+            var en = entries[0];
+            if (en.intersectionRatio >= 0.5) { inView = true; tryPlay(); }
+            else if (!en.isIntersecting) { inView = false; v.pause(); }
+          }, { threshold: [0, 0.5] }).observe(v);
+        } else { inView = true; tryPlay(); }
+        ['touchstart', 'touchend', 'click', 'keydown', 'scroll'].forEach(function (e) {
+          window.addEventListener(e, tryPlay, { passive: true });
         });
       })();
     </script>

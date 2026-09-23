@@ -64,6 +64,8 @@
   .foot-nav { display:flex; gap:8px 22px; flex-wrap:wrap; }
   .foot-nav a { color:var(--text-secondary); text-decoration:none; transition:color .15s ease; }
   .foot-nav a:hover { color:var(--brand-orange); }
+  /* laptop/desktop scale: page renders at 90% */
+  @media (min-width: 1024px) { html { zoom: 0.9; } }
 </style>
 
 <div class="wrap">

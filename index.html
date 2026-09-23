@@ -439,6 +439,11 @@
   .lede { margin-top: 0; }
   .lede .sub { margin-bottom: clamp(48px, 7vw, 76px); }
 
+  /* laptop/desktop scale: page renders at 90% */
+  @media (min-width: 1024px) {
+    html { zoom: 0.9; }
+    .hero-card { max-width: 811px; } /* keeps the hero at 730px on screen */
+  }
 </style>
 <script>
   (function () {

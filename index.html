@@ -15,8 +15,35 @@
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png?v=3">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png?v=3">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=3">
+<link rel="preload" href="/fonts/inter-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="prefetch" href="/ar/dallah.svg" as="image">
 <style>
+  @font-face {
+    font-family: "Inter"; font-style: normal; font-weight: 400; font-display: swap;
+    src: url("/fonts/inter-latin-400-normal.woff2") format("woff2");
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+  @font-face {
+    font-family: "Inter"; font-style: normal; font-weight: 500; font-display: swap;
+    src: url("/fonts/inter-latin-500-normal.woff2") format("woff2");
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+  @font-face {
+    font-family: "Inter"; font-style: normal; font-weight: 600; font-display: swap;
+    src: url("/fonts/inter-latin-600-normal.woff2") format("woff2");
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+  @font-face {
+    font-family: "Inter"; font-style: normal; font-weight: 700; font-display: swap;
+    src: url("/fonts/inter-latin-700-normal.woff2") format("woff2");
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+  @font-face {
+    font-family: "Inter"; font-style: normal; font-weight: 800; font-display: swap;
+    src: url("/fonts/inter-latin-800-normal.woff2") format("woff2");
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
   :root {
     --surface-page: #fefaf3;
     --surface-card: #ffffff;
@@ -76,7 +103,6 @@
     line-height: 1.08;
     font-weight: 700;
     letter-spacing: -0.015em;
-    text-wrap: balance;
     margin: 0 0 20px;
     max-width: 15ch;
   }
@@ -429,7 +455,7 @@
     background: var(--surface-page);
     border-radius: 16px;
     overflow: hidden;
-    margin-bottom: clamp(4px, 1vw, 12px);
+    margin-bottom: clamp(20px, 3vw, 32px);
     max-width: 730px;
   }
   .hero-svg { display: block; width: 100%; height: auto; }
@@ -448,12 +474,19 @@
   /* lede under the hero */
   .lede h1 { margin-top: 0; max-width: 20ch; }
   .lede { margin-top: 0; }
-  .lede .sub { margin-bottom: clamp(48px, 7vw, 76px); }
+  .cta-row.hero-cta { margin-bottom: clamp(48px, 7vw, 76px); }
+  .lede .sub { margin-bottom: clamp(24px, 3.5vw, 32px); }
 
-  /* laptop/desktop scale: page renders at 90% */
+  /* laptop/desktop scale: page renders at 90% (hardcoded, not zoom --
+     zoom's interaction with vw units and text layout is not consistent
+     between Chrome and Safari) */
   @media (min-width: 1024px) {
-    html { zoom: 0.9; }
-    .hero-card { max-width: 811px; } /* keeps the hero at 730px on screen */
+    header { margin-bottom: clamp(43.2px, 7.2vw, 79.2px); }
+    h1 { font-size: clamp(24.3px, 3.96vw, 39.6px); }
+    .sub { font-size: clamp(12.6px, 1.44vw, 14.4px); }
+    .hero-card { max-width: 730px; margin-bottom: clamp(10px, 1.5vw, 16px); }
+    .cta-row.hero-cta { margin-bottom: clamp(43.2px, 6.3vw, 68.4px); }
+    .lede .sub { margin-bottom: clamp(21.6px, 3.15vw, 28.8px); }
   }
 </style>
 </head>
@@ -674,8 +707,14 @@
   </div>
 
   <div class="lede">
-    <h1>The signal intelligence layer inside your revenue stack</h1>
-    <p class="sub">Daleel gives revenue teams continuous intelligence on companies scaling their go-to-market operations across the GCC, automatically finding, enriching, and updating target accounts so reps get the context they need where they already work.</p>
+    <h1>Signal intelligence<br>built for GCC<br>revenue teams</h1>
+    <p class="sub">Daleel finds, enriches, and scores companies scaling their<br>go-to-market operations across the region — so your reps get<br>current account context without digging.</p>
+    <div class="cta-row hero-cta">
+      <a class="cta" href="https://calendly.com/julian-daleel" target="_blank" rel="noopener">
+        Book a call
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10"/><path d="M9 4l4 4-4 4"/></svg>
+      </a>
+    </div>
   </div>
 
   <div class="pipeline-row">

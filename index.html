@@ -477,16 +477,8 @@
   .cta-row.hero-cta { margin-bottom: clamp(48px, 7vw, 76px); }
   .lede .sub { margin-bottom: clamp(24px, 3.5vw, 32px); }
 
-  /* laptop/desktop scale: page renders at 90% (hardcoded, not zoom --
-     zoom's interaction with vw units and text layout is not consistent
-     between Chrome and Safari) */
   @media (min-width: 1024px) {
-    header { margin-bottom: clamp(43.2px, 7.2vw, 79.2px); }
-    h1 { font-size: clamp(24.3px, 3.96vw, 39.6px); }
-    .sub { font-size: clamp(12.6px, 1.44vw, 14.4px); }
-    .hero-card { max-width: 730px; margin-bottom: clamp(10px, 1.5vw, 16px); }
-    .cta-row.hero-cta { margin-bottom: clamp(43.2px, 6.3vw, 68.4px); }
-    .lede .sub { margin-bottom: clamp(21.6px, 3.15vw, 28.8px); }
+    body { transform: scale(0.85); transform-origin: top left; width: 117.6471%; }
   }
 </style>
 </head>
@@ -804,6 +796,21 @@
       }, { passive: true });
     });
   })();
+</script>
+<script>
+(function () {
+  function fixScaleHeight() {
+    if (window.matchMedia('(min-width: 1024px)').matches) {
+      document.documentElement.style.height = (document.body.scrollHeight * 0.85) + 'px';
+    } else {
+      document.documentElement.style.height = '';
+    }
+  }
+  window.addEventListener('load', fixScaleHeight);
+  window.addEventListener('resize', fixScaleHeight);
+  document.addEventListener('DOMContentLoaded', fixScaleHeight);
+  fixScaleHeight();
+})();
 </script>
 </body>
 </html>

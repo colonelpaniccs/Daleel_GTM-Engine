@@ -409,7 +409,9 @@
   .def-op28 .mean { font-size: 16px; line-height: 1.6; color: var(--text-secondary); max-width: 26ch; margin-left: auto; }
 
   /* laptop/desktop scale: page renders at 90% */
-  @media (min-width: 1024px) { html { zoom: 0.9; } }
+  @media (min-width: 1024px) {
+    body { transform: scale(0.85); transform-origin: top left; width: 117.6471%; }
+  }
 </style>
 </head>
 <body>
@@ -674,5 +676,20 @@
   </footer>
 
 </div>
+<script>
+(function () {
+  function fixScaleHeight() {
+    if (window.matchMedia('(min-width: 1024px)').matches) {
+      document.documentElement.style.height = (document.body.scrollHeight * 0.85) + 'px';
+    } else {
+      document.documentElement.style.height = '';
+    }
+  }
+  window.addEventListener('load', fixScaleHeight);
+  window.addEventListener('resize', fixScaleHeight);
+  document.addEventListener('DOMContentLoaded', fixScaleHeight);
+  fixScaleHeight();
+})();
+</script>
 </body>
 </html>
